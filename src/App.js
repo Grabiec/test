@@ -4,7 +4,8 @@ function App() {
 	return (
 		<div>
 			<h1>Hello world </h1>
-			<button>hello</button>
+			<button>hej</button>
+			<p>co tam</p>
 		</div>
 	)
 }
