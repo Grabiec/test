@@ -1,18 +1,14 @@
-import './App.css'
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import { AccessAlarm, ThreeDRotation } from '@mui/icons-material';
+
+import NaInput from './send/naInput'
+
+import NewAdd from './send/newadd'
 
 
 function App() {
 	return (
-		<div>
-			<h1>Hello world </h1>
-			<button>hej</button>
-			<p>co tm</p>
-			<Button variant="contained">Hello World</Button>;
-			<svg data-testid="DeleteIcon"></svg>
-		</div>
+		
+			// <NewAdd/>
+		<NaInput/>
 	)
 }
 
