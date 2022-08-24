@@ -1,55 +1,45 @@
+import { useState } from 'react'
 import * as React from 'react'
-import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
-import { useRef } from 'react'
-import Stack from '@mui/material/Stack'
 
-import SendIcon from '@mui/icons-material/Send'
+import Button from '@mui/material/Button'
 
 function NewAdd() {
-	const titleInputRef = useRef()
-	const descriptionInputRef = useRef()
+	const [title, setTitle] = useState('')
+	const [description, setDescription] = useState('')
 
-	function goTo(event) {
-		event.preventDefault.useState()
-
-		const enteredTitle = titleInputRef.current.value
-		const enteredDescription = descriptionInputRef.current.value
-
-		const goData = { title: enteredTitle, description: enteredDescription }
-
-		console.log(goData)
+	const titleChange = event => {
+		setTitle(event.target.value)
 	}
+	const descriptionChange = event => {
+		setDescription(event.target.value)
+	}
+	function handleSubmit() {
+		const inputData = {
+			title: title,
+			description: description,
+		}
+		console.log(inputData)
+	}
+
 	return (
-		<div >
-			<Stack
-				component='form'
-				sx={{
-					width: '25ch',
-				}}
-				spacing={2}
-				noValidate
-				autoComplete='off'>
-				<TextField
-					hiddenLabel
-					id='filled-hidden-label-small'
-					variant='filled'
-					size='title'
-					ref={titleInputRef}
-					onSubmit={goTo}
-				/>
-				<TextField
-					hiddenLabel
-					id='filled-hidden-label-normal'
-					variant='filled'
-					ref={descriptionInputRef}
-					onSubmit={goTo}
-				/>
-			</Stack>
-			<Button variant='contained' endIcon={<SendIcon />}>
-				Send
+		<form onSubmit={handleSubmit}>
+			<div>
+				<TextField id='outlined-Title' label='title' value={title} onChange={titleChange} />
+			</div>
+			<div>
+				<TextField id='outlined-description' label='description' value={description} onChange={descriptionChange} />
+			</div>
+			<Button
+				variant='contained'
+				onClick={() => {
+					handleSubmit()
+				}}>
+				Contained
 			</Button>
-		</div>
+
+			<div></div>
+		</form>
 	)
 }
 

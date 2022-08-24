@@ -1,5 +1,5 @@
 
-import NaInput from './send/naInput'
+
 
 import NewAdd from './send/newadd'
 
@@ -7,8 +7,8 @@ import NewAdd from './send/newadd'
 function App() {
 	return (
 		
-			// <NewAdd/>
-		<NaInput/>
+			<NewAdd/>
+		
 	)
 }
 
