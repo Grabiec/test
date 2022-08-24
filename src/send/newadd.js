@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import * as React from 'react'
-import TextField from '@mui/material/TextField'
 
+import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 
 function NewAdd() {
@@ -23,22 +22,20 @@ function NewAdd() {
 	}
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<form>
 			<div>
-				<TextField id='outlined-Title' label='title' value={title} onChange={titleChange} />
+				<TextField label='title' value={title} onChange={titleChange} />
 			</div>
 			<div>
-				<TextField id='outlined-description' label='description' value={description} onChange={descriptionChange} />
+				<TextField label='description' value={description} onChange={descriptionChange} />
 			</div>
 			<Button
 				variant='contained'
 				onClick={() => {
 					handleSubmit()
 				}}>
-				Contained
+				Submit
 			</Button>
-
-			<div></div>
 		</form>
 	)
 }

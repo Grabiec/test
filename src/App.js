@@ -1,15 +1,7 @@
-
-
-
 import NewAdd from './send/newadd'
 
-
 function App() {
-	return (
-		
-			<NewAdd/>
-		
-	)
+	return <NewAdd />
 }
 
 export default App
