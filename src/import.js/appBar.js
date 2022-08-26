@@ -1,4 +1,3 @@
-import * as React from 'react'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
@@ -7,9 +6,9 @@ import Typography from '@mui/material/Typography'
 
 export default function ButtonAppBar() {
 	return (
-		<Box sx={{ flexGrow: 1 }}>
+		<Box sx={{ flexGrow: 3 }}>
 			<AppBar position='static'>
-				<Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
+				<Typography variant='h1' sx={{ flexGrow: 1 }}>
 					My Blog
 				</Typography>
 			</AppBar>

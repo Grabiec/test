@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
-import ButtonAppBar from './appBar'
 import ImportListGo from './importListGo'
 
-function List(props) {
+function List() {
 	let [loadedMeetups, setLoadedMeetups] = useState([])
 	useEffect(() => {
 		fetch('https://jsonplaceholder.typicode.com/posts')
@@ -16,7 +15,6 @@ function List(props) {
 
 	return (
 		<div>
-			<ButtonAppBar />
 			<ImportListGo items={loadedMeetups} />
 		</div>
 	)

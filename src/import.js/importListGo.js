@@ -1,9 +1,9 @@
 import ImportList from "./importlist"
 
-function ImportListGo(props) {
+function ImportListGo({items}) {
 	return (
 		<div>
-			{props.items.map(item => (
+			{items.map(item => (
 				<ImportList key={item.id} title={item.title} body={item.body} />
 			))}
 		</div>
