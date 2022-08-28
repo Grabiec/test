@@ -1,9 +1,7 @@
 import { useState } from 'react'
-
-import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
-
-function NewAdd() {
+import TextField from '@mui/material/TextField'
+function NewAdd(props) {
 	const [title, setTitle] = useState('')
 	const [description, setDescription] = useState('')
 
@@ -18,9 +16,9 @@ function NewAdd() {
 			title: title,
 			description: description,
 		}
-		console.log(inputData)
-	}
+		
 
+	}
 	return (
 		<form>
 			<div>
@@ -29,13 +27,7 @@ function NewAdd() {
 			<div>
 				<TextField label='description' value={description} onChange={descriptionChange} />
 			</div>
-			<Button
-				variant='contained'
-				onClick={() => {
-					handleSubmit()
-				}}>
-				Submit
-			</Button>
+			
 		</form>
 	)
 }

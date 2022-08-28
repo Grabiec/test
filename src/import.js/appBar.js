@@ -1,17 +1,19 @@
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
+import AlertDialog from '../btndialog/btnidalog'
 
-
-
-export default function ButtonAppBar() {
+function ButtonAppBar() {
 	return (
-		<Box sx={{ flexGrow: 3 }}>
-			<AppBar position='static'>
-				<Typography variant='h1' sx={{ flexGrow: 1 }}>
+		<Box sx={{ flexGrow: 4 }}>
+            
+			<AppBar position='static' color='default'>
+				<Typography variant='h1'>
 					My Blog
 				</Typography>
-			</AppBar>
+					<AlertDialog />
+			</AppBar >
 		</Box>
 	)
 }
+export default ButtonAppBar
