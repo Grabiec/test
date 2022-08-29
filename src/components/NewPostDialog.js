@@ -7,7 +7,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import TextField from "@mui/material/TextField";
 import AddIcon from "@mui/icons-material/Add";
 
-function NewPostDialog() {
+function NewPostDialog(props) {
   const [open, setOpen] = useState(false);
   const [formData, setFormData] = useState({
     title: "",
@@ -30,6 +30,7 @@ function NewPostDialog() {
     // TODO setData function will be invoked here.
     // TODO you need to get old array with posts and add new post to it. 
     console.log(formData);
+props.onSend(formData)
   }
 
   return (

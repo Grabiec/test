@@ -15,6 +15,7 @@ function Posts() {
       .then((data) => {
         setPosts(data);
       });
+      
   }, []);
 
   return <PostList items={posts} />;
