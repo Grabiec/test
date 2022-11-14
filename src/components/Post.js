@@ -24,13 +24,14 @@ function Post({ title, body, odd = false, handleDeletePost, id, handleUpdatePost
 				{edited ? <TextField defaultValue={title} /> : <Typography>{title}</Typography>}
 			</AccordionSummary>
 			<AccordionDetails>
-				{edited ? <TextField defaultValue={body} /> : <Typography>{body}</Typography>}
+				{edited ? <TextField value={'s'} /> : <Typography>{body}</Typography>}
 			</AccordionDetails>
 			<AccordionActions>
 				<Button color='error' onClick={() => handleDeletePost(id)}>
 					delete
 				</Button>
 				<Button onClick={() => setEdited(true)}>edit</Button>
+				{/* <Button onClick={() => setEdited(false)}>sss</Button> */}
 			</AccordionActions>
 		</Accordion>
 	)
